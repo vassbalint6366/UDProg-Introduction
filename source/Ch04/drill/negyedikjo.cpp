@@ -36,7 +36,6 @@ int main(){
             break;
         }
     
-
         cout << "Írj be 1 számot." << endl;
         cin >> a;
         szamok.push_back(a); 
@@ -44,6 +43,14 @@ int main(){
 
         cout << "Kérlek adj meg egy mértékegységet amiben a számod van. (ft, cm, m ,in):    ";
         cin >> mertekegyseg;
+
+        while ( mertekegyseg!="cm" and mertekegyseg!="m" and mertekegyseg!="ft" and mertekegyseg!="in")
+                {
+            cout << "Ez nem egy megadott méret volt! Próbálkozz újra: " << endl;
+            cin.clear();
+            cin.ignore();
+            cin >> mertekegyseg;
+        }
 
         if(mertekegyseg=="cm")
         {
